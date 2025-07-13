@@ -1,0 +1,14 @@
+base_url: "https://www.manomano.fr"
+categories:
+  - name: Carrelage
+    path: /carrelage-sol-et-mur-3356
+  - name: Éviers
+    path: /evier-de-cuisine-1077
+  - name: WC
+    path: /wc-a-poser-40
+  - name: Peinture
+    path: /peinture-interieure-428
+  - name: Meubles de salle de bains
+    path: /meuble-vasque-et-lavabo-332
+  - name: Receveurs de douche
+    path: /receveur-de-douche-341

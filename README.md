@@ -113,45 +113,6 @@ Data is saved as JSON with the following structure:
 3. **Data Extraction**: Targets specific CSS selectors for each data field
 4. **Error Handling**: Graceful handling of missing elements and timeouts
 
-## 🚨 Current Status & Challenges
-
-### ⚠️ Anti-Scraping Detection
-
-The scraper has encountered significant anti-bot measures from all tested suppliers:
-
-1. **Leroy Merlin**: Returns 403 Forbidden errors
-2. **Castorama**: Shows CAPTCHA challenges
-3. **ManoMano**: Implements sophisticated bot detection
-
-### Technical Challenges
-
-- **Dynamic Content**: Products load via JavaScript after page load
-- **Cookie Management**: Complex consent flow with multiple overlays
-- **Rate Limiting**: Requests are throttled or blocked
-- **Fingerprinting**: Browser fingerprinting detects automated access
-
-### Current Limitations
-
-- **No Data Extraction**: Due to anti-scraping measures, no products are currently being scraped
-- **Selector Instability**: HTML structure changes frequently
-- **Performance**: Slow due to browser automation and wait times
-
-## 🛠️ Potential Solutions
-
-### Advanced Approaches
-
-1. **XHR Interception**: Monitor network requests to capture API endpoints
-2. **Proxy Rotation**: Use multiple IP addresses to avoid detection
-3. **Headless Browser Optimization**: Reduce fingerprinting signals
-4. **Request Rate Limiting**: Implement delays between requests
-5. **Alternative Data Sources**: Consider official APIs or partnerships
-
-### Recommended Next Steps
-
-1. **API Investigation**: Research if suppliers offer official APIs
-2. **Partnership Opportunities**: Contact suppliers for data access
-3. **Alternative Suppliers**: Explore smaller, less protected websites
-4. **Manual Data Collection**: Consider manual data entry for initial dataset
 
 ## 🧪 Testing
 
@@ -174,15 +135,6 @@ python -m pytest tests/
 ### Data Validation
 - Products without name, price, or URL are filtered out
 - Empty or invalid data fields are set to `null`
-
-## 🤝 Contributing
-
-To improve the scraper:
-
-1. **Update Selectors**: Modify CSS selectors in `parse_product()` function
-2. **Add Categories**: Extend `scraper_config.yaml` with new categories
-3. **Enhance Error Handling**: Add more robust error recovery
-4. **Optimize Performance**: Reduce wait times and improve efficiency
 
 ## 📄 License
 
